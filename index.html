@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vialance</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link
+    rel="stylesheet"
+    href="https://api.fontshare.com/v2/css?f[]=manrope@700&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css"
+  />
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+  />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  });
+</script>
+
+<body>
+  <header id="#" class="site-header">
+    <div class="container">
+    <a href="#" class="logo" tabindex="-1">
+    <img src="img/logo.svg" alt="VIALANCE Logo" draggable="false" />
+    </a>
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="#top">Главная</a></li>
+          <li><a href="#autopark">Автопарк</a></li>
+          <li><a href="#about-us">О нас</a></li>
+        </ul>
+      </nav>
+      <a href="#booking" class="btn-order">Заказать услугу</a>
+    </div>
+  </header>
+  
+<section class="hero" style="background-image: url('img/hero.jpg');" data-aos="zoom-out">
+  <div class="hero__overlay"></div>
+  <div class="hero__content">
+    <h1>
+      Премиальный<br>
+      трансфер по Европе
+    </h1>
+    <p>Безопасно. Комфортно. Удобно.</p>
+    <a href="#booking" class="btn-hero">Заказать услугу</a>
+  </div>
+</section>
+
+  <section id="autopark" class="autopark" data-aos="fade-up">
+    <div class="container">
+      <h2 class="autopark__title">Автопарк</h2>
+      <div class="autopark__content">
+        <div class="autopark__desc">
+          <p>
+            Mercedes-Benz Viano 3.0 CDI<br>
+            7 посадочных мест<br>
+            Цвет: чёрный
+          </p>
+        </div>
+        <div id="lightgallery-fleet" class="autopark__gallery">
+          <a href="img/photo1.jpg">
+            <img src="img/photo1.jpg">
+          </a>
+          <a href="img/photo2.jpg">
+            <img src="img/photo2.jpg">
+          </a>
+          <a href="img/photo3.jpg">
+            <img src="img/photo3.jpg">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section id="about-us" class="about-us" data-aos="fade-up">
+  <div class="container">
+    <h2 class="about-us__title">О нас</h2>
+    <div class="about-us__text">
+      <p>
+        Мы — команда профессионалов премиального трансфера по Европе. Наша миссия — обеспечить клиентам максимальный комфорт, безопасность и индивидуальный подход на каждом этапе поездки. Опытные водители, современный парк автомобилей и круглосуточная поддержка — залог вашего спокойствия и уверенности в пути.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="services" data-aos="fade-up">
+  <div class="container">
+    <h2 class="services__title">Наши услуги</h2>
+    <div class="services__list">
+      <div class="service">
+        <img src="img/icon1.png" alt="Трансфер в аэропорт" class="service__icon">
+        <p class="service__name">Трансфер в аэропорт</p>
+      </div>
+      <div class="service">
+        <img src="img/icon2.png" alt="Персональные поездки по городам" class="service__icon">
+        <p class="service__name">Персональные поездки по городам</p>
+      </div>
+      <div class="service">
+        <img src="img/icon3.png" alt="Мультидневные туры" class="service__icon">
+        <p class="service__name">Мультидневные туры</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="booking" class="booking-section" data-aos="fade-up">
+  <div class="container">
+    <h2>Свяжитесь с нами</h2>
+    <form class="booking-form">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Имя" required>
+        <input type="text" name="contact" placeholder="Телефон / Почта" required>
+      </div>
+      <div class="form-row">
+        <input type="text" name="from" placeholder="Откуда" required>
+      </div>
+      <div class="form-row">
+        <input type="text" name="to" placeholder="Куда" required>
+      </div>
+      <div class="form-row">
+        <textarea name="info" rows="4" placeholder="Дополнительная информация (по желанию)"></textarea>
+      </div>
+      <button type="submit" class="btn-order">Отправить заявку</button>
+      <p class="booking-feedback-text">
+        Мы свяжемся c вами в блжиайшее время</p>
+    </form>
+  </div>
+</section>
+
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.umd.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      lightGallery(
+        document.getElementById('lightgallery-fleet'),
+        {
+          selector: 'a',
+          plugins: [lgThumbnail, lgZoom],
+          speed: 500,
+          download: false,
+          thumbnail: true,
+          zoom: true
+        }
+      );
+    });
+  </script>
+
+<footer class="site-footer" data-aos="fade">
+  <div class="container footer__inner">
+    <div class="footer__col footer__col--left">
+      <p class="footer__copy">© 2025 Vialance</p>
+    </div>
+    <div class="footer__col footer__col--center">
+    <div class="footer__logo">
+        <img src="img/logo-footer.svg" alt="Vialance Logo">
+    </div>
+    </div>
+    <div class="footer__col footer__col--right">
+      <p class="footer__contact">
+        <p>info@vialance.eu</p>
+        <p>+380 993 321 699</p>
+        <p>+420 720 986 834</p>
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
