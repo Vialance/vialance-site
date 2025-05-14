@@ -22,6 +22,7 @@ html {
   background: none;
   border: none;
   cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .lang-switcher .current img {
@@ -92,7 +93,6 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, button {
 body {
   margin: 0;
   background-color: #f9f9f9;
-  font-family: Arial, sans-serif;
   padding-top: 100px;
 }
 
@@ -210,63 +210,69 @@ img {
   position: relative;
   width: 100%;
   padding-top: 35%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  background: url('img/hero.jpg') center/cover no-repeat;
 }
 
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0,0,0,0.75);
+  z-index: 1;
+}
+
+.hero__centerer {
+  position: absolute;
+  inset: 0;
+  margin-right: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  z-index: 2;
 }
 
 .hero__content {
-  position: absolute;
-  top: 48%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  padding: 0 10.2rem;
+  max-width: 600px;
+  padding: 0 1.5rem; 
+  text-align: left;
   color: #fff;
 }
 
-.hero__content h1 {
+.hero-title {
   margin: 0 0 4rem;
-  font-size: clamp(2rem, 5vw, 5rem);
+  font-size: 5rem;
   line-height: 1.1;
   text-align: left;
 }
 
+.hero-title__line {
+  display: block;
+  white-space: nowrap; 
+}
+
 .hero__content p {
-  margin: 0 0 4.5rem;
+  margin: 0 0 2rem;
   font-size: clamp(1rem, 2.5vw, 1.5rem);
   text-align: left;
 }
 
 .btn-hero {
-  position: relative;
-  overflow: hidden;
-  margin-left: -37.3rem;
-  font-size: 1.3rem;
+  display: inline-block;
   padding: 1rem 1.5rem;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: #f3f3f3;
   color: #0a202e;
   border-radius: .75rem;
+  font-size: 1.25rem;
   text-decoration: none;
   font-weight: 600;
-  transition: .2s ease-in-out,
-  color .2s ease-in-out; 
-  box-shadow: none;
+  transition: 
+    background-color 0.2s ease-in-out,
+    color            0.2s ease-in-out;
 }
 
+
 .btn-hero:hover {
-  background-color: rgba(23, 72, 102, 1);
-  color: #f9f9f9; 
-  box-shadow: none;
+  background-color: #173c66;
+  color: #f3f3f3;
 }
 
 .services .container {
