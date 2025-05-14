@@ -27,7 +27,7 @@
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     AOS.init({
-      duration: 1000,
+      duration: 1500,
       offset: 1,
       once: true
     });
@@ -37,13 +37,11 @@
 <body>
   <header id="#" class="site-header">
     <div class="container">
-    <a href="#" class="logo" tabindex="-1">
-    <img src="img/logo.svg" alt="VIALANCE Logo" draggable="false" />
-    </a>
+    <a href="#" class="logo" tabindex="-1"><img src="img/logo.svg" alt="VIALANCE Logo" draggable="false" data-aos="fade"/></a>
     <nav class="main-nav">
     <ul class="nav-list">
     <li class="nav-item lang-item">
-        <div class="lang-switcher" id="langSwitcher" aria-expanded="false">
+        <div class="lang-switcher" id="langSwitcher" aria-expanded="false" data-aos="fade">
             <button class="current" aria-label="Выбор языка">
             <img src="img/flag-ru.svg" alt="RU" width="24" height="24">
             </button>
@@ -60,12 +58,12 @@
             </ul>
         </div>
         </li>
-        <li class="nav-item"><a href="#" data-i18n-key="main">Главная</a></li>
-        <li class="nav-item"><a href="#autopark" data-i18n-key="fleet">Автопарк</a></li>
-        <li class="nav-item"><a href="#about-us" data-i18n-key="aboutus">О нас</a></li>
+        <li class="nav-item"><a href="#" data-i18n-key="main" data-aos="fade">Главная</a></li>
+        <li class="nav-item"><a href="#autopark" data-i18n-key="fleet" data-aos="fade">Автопарк</a></li>
+        <li class="nav-item"><a href="#about-us" data-i18n-key="aboutus" data-aos="fade">О нас</a></li>
     </ul>
     </nav>
-      <a href="#booking" class="btn-order" data-i18n-key="orderservice1">Заказать услугу</a>
+      <a href="#booking" class="btn-order" data-i18n-key="orderservice1" data-aos="fade">Заказать услугу</a>
     </div>
   </header>
   
@@ -73,7 +71,7 @@
   <div class="hero__overlay"></div>
   <div class="hero__centerer">
     <div class="hero__content">
-        <h1 class="hero-title">
+        <h1  data-i18n-key="premiumtransfer" class="hero-title">
         <span class="hero-title__line">Премиальный</span>
         <span class="hero-title__line">трансфер по Европе</span>
         </h1>
