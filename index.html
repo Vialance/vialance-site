@@ -28,7 +28,7 @@
   document.addEventListener('DOMContentLoaded', () => {
     AOS.init({
       duration: 1500,
-      offset: 1,
+      offset: 0.0001,
       once: true
     });
   });
@@ -55,6 +55,9 @@
             <li role="menuitem" data-lang="en" data-flag="en">
                 <img src="img/flag-en.svg" alt="EN" width="20" height="20"> English
             </li>
+            <li role="menuitem" data-lang="cz" data-flag="cz">
+                <img src="img/flag-cz.svg" alt="CZ" width="20" height="20"> Česky
+            </li>            
             </ul>
         </div>
         </li>
@@ -81,31 +84,99 @@
   </div>
 </section>
 
-  <section id="autopark" class="autopark" data-aos="fade-up">
-    <div class="container">
-      <h2 class="autopark__title" data-i18n-key="titlefleet">Автопарк</h2>
-      <div class="autopark__content">
+<section id="autopark" class="autopark" data-aos="fade-up">
+  <div class="container">
+    <h2 class="autopark__title" data-i18n-key="titlefleet">Автопарк</h2>
+    <div class="autopark__fleet-list">
+      <!-- Машина 1 -->
+      <div class="autopark__car">
+        <div class="autopark__gallery" id="lightgallery-fleet-1">
+          <a href="img/car1photo1.jpg">
+            <img src="img/car1photo1.jpg">
+          </a>
+          <a href="img/car1photo2.jpg" style="display:none;">
+            <img src="img/car1photo2.jpg">
+          </a>
+          <a href="img/car1photo3.jpg" style="display:none;">
+            <img src="img/car1photo3.jpg">
+          </a>
+          <a href="img/car1photo4.jpg" style="display:none;">
+            <img src="img/car1photo4.jpg">
+          </a>
+          <a href="img/car1photo5.jpg" style="display:none;">
+            <img src="img/car1photo5.jpg">
+          </a>
+          <a href="img/car1photo6.jpg" style="display:none;">
+            <img src="img/car1photo6.jpg">
+          </a>
+          <a href="img/car1photo7.jpg" style="display:none;">
+            <img src="img/car1photo7.jpg">
+          </a>
+          <a href="img/car1photo8.jpg" style="display:none;">
+            <img src="img/car1photo9.jpg">
+          </a>
+          <a href="img/car1photo9.jpg" style="display:none;">
+            <img src="img/car1photo8.jpg">
+          </a>
+          <a href="img/car1photo10.jpg" style="display:none;">
+            <img src="img/car1photo10.jpg">
+          </a>
+          <a href="img/car1photo11.jpg" style="display:none;">
+            <img src="img/car1photo11.jpg">
+          </a>
+          <a href="img/car1photo12.jpg" style="display:none;">
+            <img src="img/car1photo12.jpg">
+          </a>
+          <a href="img/car1photo13.jpg" style="display:none;">
+            <img src="img/car1photo13.jpg">
+          </a>
+          <a href="img/car1photo14.jpg" style="display:none;">
+            <img src="img/car1photo14.jpg">
+          </a>
+          <a href="img/car1photo15.jpg" style="display:none;">
+            <img src="img/car1photo15.jpg">
+          </a>    
+        </div>
         <div class="autopark__desc">
-          <p data-i18n-key="carsdescriptions">
+          <p data-i18n-key="cars1descriptions">
             Mercedes-Benz Viano 3.0 CDI<br>
             7 посадочных мест<br>
             Цвет: чёрный
           </p>
         </div>
-        <div id="lightgallery-fleet" class="autopark__gallery">
-          <a href="img/photo1.jpg">
-            <img src="img/photo1.jpg">
+      </div>
+
+      <!-- Машина 2 -->
+      <div class="autopark__car">
+        <div class="autopark__gallery" id="lightgallery-fleet-1">
+          <a href="img/car2photo1.jpg">
+            <img src="img/car2photo1.jpg">
           </a>
-          <a href="img/photo2.jpg">
-            <img src="img/photo2.jpg">
+          <a href="img/car2photo2.jpg" style="display:none;">
+            <img src="img/car2photo2.jpg">
           </a>
-          <a href="img/photo3.jpg">
-            <img src="img/photo3.jpg">
+          <a href="img/car2photo3.jpg" style="display:none;">
+            <img src="img/car2photo3.jpg">
           </a>
+          <a href="img/car2photo4.jpg" style="display:none;">
+            <img src="img/car2photo4.jpg">
+          </a>
+          <a href="img/car2photo5.jpg" style="display:none;">
+            <img src="img/car2photo5.jpg">
+          </a>                    
+        </div>
+        <div class="autopark__desc">
+          <p data-i18n-key="cars2descriptions">
+            Mercedes-Benz Viano 3.0 CDI<br>
+            7 посадочных мест<br>
+            Цвет: чёрный
+          </p>
         </div>
       </div>
+      <!-- Добавляй новые машины по аналогии -->
     </div>
-  </section>
+  </div>
+</section>
 
 <section id="about-us" class="about-us" data-aos="fade-up">
   <div class="container">
@@ -173,22 +244,21 @@
   <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.umd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.umd.min.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      lightGallery(
-        document.getElementById('lightgallery-fleet'),
-        {
-          selector: 'a',
-          plugins: [lgThumbnail, lgZoom],
-          speed: 500,
-          download: false,
-          thumbnail: true,
-          zoom: true
-        }
-      );
-    });
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.autopark__gallery').forEach(gallery => {
+          lightGallery(gallery, {
+            selector: 'a',
+            plugins: [lgThumbnail, lgZoom],
+            speed: 500,
+            download: false,
+            thumbnail: true,
+            zoom: true
+          });
+        });
+      });
   </script>
 
-<footer class="site-footer" data-aos="fade">
+<footer class="site-footer">
   <div class="container footer__inner">
     <div class="footer__col footer__col--left">
       <p class="footer__copy">© 2025 Vialance</p>
@@ -201,8 +271,9 @@
     <div class="footer__col footer__col--right">
       <p class="footer__contact">
         <p>info@vialance.eu</p>
-        <p>+380 993 321 699</p>
         <p>+420 720 986 834</p>
+        <p>+380 993 321 699</p>
+        <p>(Telegram, WhatsApp, Viber)</p>
       </p>
     </div>
   </div>

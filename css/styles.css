@@ -378,7 +378,8 @@ img {
 }
 
 .autopark{
-    padding-bottom: 6rem;
+    padding-bottom: 2rem;
+    margin-top: -2rem;
 }
 
 .autopark .container {
@@ -387,20 +388,47 @@ img {
   align-items: center;
   text-align: center;
 }
+
+.autopark__fleet-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  justify-content: center;
+  padding-top: 3rem;
+}
+
+.autopark__car {
+  border-radius: 1.1rem;
+  max-width: 690px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.autopark__gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: .75rem;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
+  transition: transform .3s ease;
+  cursor: pointer;
+}
+
 .autopark__title {
   font-size: clamp(2rem, 5vw, 5rem);
   color: #0a202e;
   margin-bottom: 0.5rem;
 }
+
 .autopark__desc {
   max-width: 600px;
-  width: 100%; 
-  margin: 0 auto; 
+  width: 100%;
+  margin: 1rem auto 0;
   font-size: 1rem;
   line-height: 1.6;
   color: #333;
-  margin-bottom: 2rem;
-  text-align: center !important;
+  text-align: center;
   font-size: clamp(1rem, 2.5vw, 1.25rem);
 }
 
@@ -609,11 +637,29 @@ img {
   .service__name {
     font-size: 1.2rem;
   }
+  .autopark{
+    padding-bottom: 6rem;
+    margin-top: 1rem;
+}
   .autopark .container {
     text-align: center;
     padding: 0 1rem;
     margin: 0 auto;
-    margin-bottom: -2rem;
+    margin-bottom: -5.5rem;
+  }
+  .autopark__fleet-list {
+    flex-direction: column;
+    gap: 0rem;
+    align-items: center;
+  }
+    .autopark__title {
+    margin-bottom: -1rem;
+    margin-top: 1rem;
+  }
+  .autopark__car {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 1.2rem;
   }
   .autopark__desc {
     font-size: 1rem;
@@ -623,7 +669,6 @@ img {
   .autopark__gallery {
     text-align: center;
     margin: 0 auto;
-    padding-top: 0.25rem;
   }
   .autopark__gallery img {
     margin: 0 auto;
