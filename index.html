@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vialance</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link
+    rel="stylesheet"
+    href="https://api.fontshare.com/v2/css?f[]=manrope@700&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css"
+  />
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+  />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    AOS.init({
+      duration: 1500,
+      offset: 0.0001,
+      once: true
+    });
+  });
+</script>
+
+<body>
+  <header id="#" class="site-header">
+    <div class="container">
+    <a href="#" class="logo" tabindex="-1"><img src="img/logo.svg" alt="VIALANCE Logo" draggable="false" data-aos="fade"/></a>
+    <nav class="main-nav">
+    <ul class="nav-list">
+    <li class="nav-item lang-item">
+        <div class="lang-switcher" id="langSwitcher" aria-expanded="false" data-aos="fade">
+            <button class="current" aria-label="Выбор языка">
+            <img src="img/flag-ru.svg" alt="RU" width="24" height="24">
+            </button>
+            <ul class="options" role="menu">
+            <li role="menuitem" data-lang="ru" data-flag="ru">
+                <img src="img/flag-ru.svg" alt="RU" width="20" height="20"> Русский
+            </li>
+            <li role="menuitem" data-lang="uk" data-flag="uk">
+                <img src="img/flag-uk.svg" alt="UK" width="20" height="20"> Українська
+            </li>
+            <li role="menuitem" data-lang="en" data-flag="en">
+                <img src="img/flag-en.svg" alt="EN" width="20" height="20"> English
+            </li>
+            <li role="menuitem" data-lang="cz" data-flag="cz">
+                <img src="img/flag-cz.svg" alt="CZ" width="20" height="20"> Česky
+            </li>            
+            </ul>
+        </div>
+        </li>
+        <li class="nav-item"><a href="#" data-i18n-key="main" data-aos="fade">Главная</a></li>
+        <li class="nav-item"><a href="#autopark" data-i18n-key="fleet" data-aos="fade">Автопарк</a></li>
+        <li class="nav-item"><a href="#about-us" data-i18n-key="aboutus" data-aos="fade">О нас</a></li>
+    </ul>
+    </nav>
+      <a href="#booking" class="btn-order" data-i18n-key="orderservice1" data-aos="fade">Заказать услугу</a>
+    </div>
+  </header>
+  
+<section class="hero" style="background-image: url('img/hero.jpg');" data-aos="zoom-out">
+  <div class="hero__overlay"></div>
+  <div class="hero__centerer">
+    <div class="hero__content">
+        <h1  data-i18n-key="premiumtransfer" class="hero-title">
+        <span class="hero-title__line">Премиальный</span>
+        <span class="hero-title__line">трансфер по Европе</span>
+        </h1>
+      <p data-i18n-key="transferdescription">Безопасно. Комфортно. Удобно.</p>
+      <a href="#booking" class="btn-hero" data-i18n-key="orderservice2">Заказать услугу</a>
+    </div>
+  </div>
+</section>
+
+<section id="autopark" class="autopark" data-aos="fade-up">
+  <div class="container">
+    <h2 class="autopark__title" data-i18n-key="titlefleet">Автопарк</h2>
+    <div class="autopark__fleet-list">
+      <!-- Машина 1 -->
+      <div class="autopark__car">
+        <div class="autopark__gallery" id="lightgallery-fleet-1">
+          <a href="img/car1photo1.jpg">
+            <img src="img/car1photo1.jpg">
+          </a>
+          <a href="img/car1photo2.jpg" style="display:none;">
+            <img src="img/car1photo2.jpg">
+          </a>
+          <a href="img/car1photo3.jpg" style="display:none;">
+            <img src="img/car1photo3.jpg">
+          </a>
+          <a href="img/car1photo4.jpg" style="display:none;">
+            <img src="img/car1photo4.jpg">
+          </a>
+          <a href="img/car1photo5.jpg" style="display:none;">
+            <img src="img/car1photo5.jpg">
+          </a>
+          <a href="img/car1photo6.jpg" style="display:none;">
+            <img src="img/car1photo6.jpg">
+          </a>
+          <a href="img/car1photo7.jpg" style="display:none;">
+            <img src="img/car1photo7.jpg">
+          </a>
+          <a href="img/car1photo8.jpg" style="display:none;">
+            <img src="img/car1photo9.jpg">
+          </a>
+          <a href="img/car1photo9.jpg" style="display:none;">
+            <img src="img/car1photo8.jpg">
+          </a>
+          <a href="img/car1photo10.jpg" style="display:none;">
+            <img src="img/car1photo10.jpg">
+          </a>
+          <a href="img/car1photo11.jpg" style="display:none;">
+            <img src="img/car1photo11.jpg">
+          </a>
+          <a href="img/car1photo12.jpg" style="display:none;">
+            <img src="img/car1photo12.jpg">
+          </a>
+          <a href="img/car1photo13.jpg" style="display:none;">
+            <img src="img/car1photo13.jpg">
+          </a>
+          <a href="img/car1photo14.jpg" style="display:none;">
+            <img src="img/car1photo14.jpg">
+          </a>
+          <a href="img/car1photo15.jpg" style="display:none;">
+            <img src="img/car1photo15.jpg">
+          </a>    
+        </div>
+        <div class="autopark__desc">
+          <p data-i18n-key="cars1descriptions">
+            Mercedes-Benz Viano 3.0 CDI<br>
+            7 посадочных мест<br>
+            Цвет: чёрный
+          </p>
+        </div>
+      </div>
+
+      <!-- Машина 2 -->
+      <div class="autopark__car">
+        <div class="autopark__gallery" id="lightgallery-fleet-1">
+          <a href="img/car2photo1.jpg">
+            <img src="img/car2photo1.jpg">
+          </a>
+          <a href="img/car2photo2.jpg" style="display:none;">
+            <img src="img/car2photo2.jpg">
+          </a>
+          <a href="img/car2photo3.jpg" style="display:none;">
+            <img src="img/car2photo3.jpg">
+          </a>
+          <a href="img/car2photo4.jpg" style="display:none;">
+            <img src="img/car2photo4.jpg">
+          </a>
+          <a href="img/car2photo5.jpg" style="display:none;">
+            <img src="img/car2photo5.jpg">
+          </a>                    
+        </div>
+        <div class="autopark__desc">
+          <p data-i18n-key="cars2descriptions">
+            Mercedes-Benz Viano 3.0 CDI<br>
+            7 посадочных мест<br>
+            Цвет: чёрный
+          </p>
+        </div>
+      </div>
+      <!-- Новые машины -->
+      </div>
+  </div>
+</section>
+
+<section id="about-us" class="about-us" data-aos="fade-up">
+  <div class="container">
+    <h2 class="about-us__title" data-i18n-key="aboutustitle">О нас</h2>
+    <div class="about-us__text">
+      <p data-i18n-key="aboutustext">
+        Мы — команда профессионалов премиального трансфера по Европе. Наша миссия — обеспечить клиентам максимальный комфорт, безопасность и индивидуальный подход на каждом этапе поездки. Опытные водители, современный парк автомобилей и круглосуточная поддержка — залог вашего спокойствия и уверенности в пути.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="services" data-aos="fade-up">
+  <div class="container">
+    <h2 class="services__title" data-i18n-key="ourservicestitle">Наши услуги</h2>
+    <div class="services__list">
+      <div class="service">
+        <img src="img/icon1.png" alt="Трансфер в аэропорт" class="service__icon">
+        <p class="service__name" data-i18n-key="service1">Трансфер в аэропорт</p>
+      </div>
+      <div class="service">
+        <img src="img/icon2.png" alt="Персональные поездки по городам" class="service__icon">
+        <p class="service__name" data-i18n-key="service2">Персональные поездки по городам</p>
+      </div>
+      <div class="service">
+        <img src="img/icon3.png" alt="Мультидневные туры" class="service__icon">
+        <p class="service__name" data-i18n-key="service3">Мультидневные туры</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="booking" class="booking-section" data-aos="fade-up">
+  <div class="container">
+    <h2 data-i18n-key="contactustitle">Свяжитесь с нами</h2>
+    <form
+    action="https://formspree.io/f/mkgrplgl"
+    method="POST"
+    class="booking-form">
+    
+    <input type="hidden" name="_replyto" value="info@vialance.eu" />
+    <input type="hidden" name="_subject" value="Новая заявка с сайта Vialance" />
+
+      <div class="form-row">
+        <input type="text" name="name" data-i18n-key="yourname" placeholder="Имя" required>
+        <input type="text" name="contact" data-i18n-key="phoneoremail" placeholder="Телефон / Почта" required>
+      </div>
+      <div class="form-row">
+        <input type="text" name="from" data-i18n-key="from" placeholder="Откуда (по желанию)">
+      </div>
+      <div class="form-row">
+        <input type="text" name="to" data-i18n-key="to" placeholder="Куда (по желанию)">
+      </div>
+      <div class="form-row">
+        <textarea name="info" rows="4" data-i18n-key="additionalinfo" placeholder="Дополнительная информация (по желанию)"></textarea>
+      </div>
+      <button type="submit" class="btn-order" data-i18n-key="sendrequest">Отправить заявку</button>
+      <p class="booking-feedback-text" data-i18n-key="wecontactyou">
+        Мы свяжемся c вами в ближайшее время</p>
+    </form>
+  </div>
+</section>
+
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.umd.min.js"></script>
+  <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.autopark__gallery').forEach(gallery => {
+          lightGallery(gallery, {
+            selector: 'a',
+            plugins: [lgThumbnail, lgZoom],
+            speed: 500,
+            download: false,
+            thumbnail: true,
+            zoom: true
+          });
+        });
+      });
+  </script>
+
+<footer class="site-footer">
+  <div class="container footer__inner">
+    <div class="footer__col footer__col--left">
+      <p class="footer__copy">© 2025 Vialance</p>
+    </div>
+    <div class="footer__col footer__col--center">
+    <div class="footer__logo">
+        <img src="img/logo-footer.svg" alt="Vialance Logo">
+    </div>
+    </div>
+    <div class="footer__col footer__col--right">
+      <p class="footer__contact">
+        <p>info@vialance.eu</p>
+        <p>+420 720 986 834</p>
+        <p>+380 993 321 699</p>
+        <p>(Telegram, WhatsApp, Viber)</p>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script>
+async function loadTranslations() {
+  const res = await fetch('translations.json');
+  if (!res.ok) throw new Error('Не удалось загрузить translations.json');
+  return res.json();
+}
+
+function applyTranslations(translations, lang) {
+  document.querySelectorAll('[data-i18n-key]').forEach(el => {
+    const key = el.getAttribute('data-i18n-key');
+    const text = translations[lang]?.[key];
+    if (!text) return; 
+
+    if (el.placeholder !== undefined) {
+      el.placeholder = text;
+    } else {
+      el.innerHTML = text.replace(/\n/g, '<br>');
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+  try {
+    const translations = await loadTranslations();
+    const switcher     = document.getElementById('langSwitcher');
+    const savedLang    = localStorage.getItem('lang') || 'ru';
+    switcher.value     = savedLang;
+    applyTranslations(translations, savedLang);
+
+    switcher.addEventListener('change', () => {
+      const newLang = switcher.value;
+      localStorage.setItem('lang', newLang);
+      applyTranslations(translations, newLang);
+    });
+  } catch (err) {
+    console.error(err);
+  }
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+  const translations = await loadTranslations();
+  const switcher     = document.getElementById('langSwitcher');
+  const btnImg       = switcher.querySelector('.current img');
+  const options      = switcher.querySelectorAll('.options li');
+  const savedLang    = localStorage.getItem('lang') || 'ru';
+  const CLOSE_DELAY  = 250; // ms, должно совпадать с duration в CSS
+
+  function setLanguage(lang, flag) {
+    btnImg.src = `img/flag-${flag}.svg`;
+    btnImg.alt = flag.toUpperCase();
+    localStorage.setItem('lang', lang);
+    applyTranslations(translations, lang);
+  }
+
+  // Инициализация
+  {
+    const initial = Array.from(options).find(li => li.dataset.lang === savedLang);
+    const flag    = initial?.dataset.flag || 'ru';
+    setLanguage(savedLang, flag);
+  }
+
+  // Открытие/закрытие дропдауна
+  switcher.addEventListener('click', e => {
+    e.stopPropagation();
+    const open = switcher.getAttribute('aria-expanded') === 'true';
+    switcher.setAttribute('aria-expanded', String(!open));
+  });
+
+  // Выбор языка + плавное закрытие
+  options.forEach(li => {
+    li.addEventListener('click', () => {
+      const { lang, flag } = li.dataset;
+      setLanguage(lang, flag);
+      // Ждём окончания CSS-анимации, затем закрываем
+      setTimeout(() => {
+        switcher.setAttribute('aria-expanded', 'false');
+      }, CLOSE_DELAY);
+    });
+  });
+
+  // Закрытие при клике вне
+  document.addEventListener('click', () => {
+    switcher.setAttribute('aria-expanded', 'false');
+  });
+});
+</script>
+
+</body>
+</html>
