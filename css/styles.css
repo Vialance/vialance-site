@@ -175,7 +175,7 @@ img {
 .btn-order {
   position: relative;
   overflow: hidden;
-  margin-left: -18.5rem;
+  margin-left: -16.5rem;
   font-size: 1.3rem;
   padding: 1rem 1.5rem;
   background-color: #0a202e;
@@ -201,7 +201,7 @@ img {
 }
 
 .btn-order:hover {
-  background-color: #131727;
+  background-color: #0a202e;
   box-shadow: none;
 }
 
@@ -245,7 +245,7 @@ img {
   font-size: 5rem;
   line-height: 1.1;
   white-space: pre;      
-  overflow-wrap: normal; /* нельзя будет разбить вторую строку */
+  overflow-wrap: normal;
 }
 
 .hero-title__line {
@@ -306,7 +306,7 @@ img {
 }
 
 .service__icon {
-  height: 6rem;
+  height: 8rem;
   margin-bottom: 2rem;
   padding-top: 2rem;
 }
@@ -424,7 +424,7 @@ img {
 .autopark__desc {
   max-width: 600px;
   width: 100%;
-  margin: 1rem auto 0;
+  margin: 1.8rem auto 0;
   font-size: 1rem;
   line-height: 1.6;
   color: #333;
@@ -532,14 +532,40 @@ img {
   font-size: 1.1rem;
 }
 
+.lang-switcher .current {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: row;
+}
+
+.lang-code-current {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0a202e;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 @media (max-width: 768px) {
+  
+  .lang-code-current {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-right: -1rem;
+    padding-left: 0.5rem;
+  }
+  
   body {
     overflow-x: hidden;
-    padding-top: 85px; /* Adjusted for mobile */
+    padding-top: 85px;
     margin: 0;
   }
   .site-header .container {
-    padding: 0.5rem 1rem; /* Reduced padding for better fit */
+    padding: 0.5rem 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -577,7 +603,7 @@ img {
   .btn-order {
     font-size: 1rem;
     padding: 1rem 0.1rem;
-    margin-left: 0.5rem;
+    margin-left: 1rem;
     order: 2;
     margin-top: 0;
     text-align: center;

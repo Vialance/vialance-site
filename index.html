@@ -37,14 +37,17 @@
 <body>
   <header id="#" class="site-header">
     <div class="container">
-    <a href="#" class="logo" tabindex="-1"><img src="img/logo.svg" alt="VIALANCE Logo" draggable="false" data-aos="fade"/></a>
+    <a href="#" class="logo" tabindex="-1" data-scroll-to="top">
+      <img src="img/logo.svg" alt="VIALANCE Logo" draggable="false" data-aos="fade"/>
+    </a>
     <nav class="main-nav">
     <ul class="nav-list">
     <li class="nav-item lang-item">
         <div class="lang-switcher" id="langSwitcher" aria-expanded="false" data-aos="fade">
-            <button class="current" aria-label="Выбор языка">
+          <button class="current" aria-label="Выбор языка">
+            <span class="lang-code-current">RU</span>
             <img src="img/flag-ru.svg" alt="RU" width="24" height="24">
-            </button>
+          </button>
             <ul class="options" role="menu">
             <li role="menuitem" data-lang="ru" data-flag="ru">
                 <img src="img/flag-ru.svg" alt="RU" width="20" height="20"> Русский
@@ -61,12 +64,14 @@
             </ul>
         </div>
         </li>
-        <li class="nav-item"><a href="#" data-i18n-key="main" data-aos="fade">Главная</a></li>
-        <li class="nav-item"><a href="#autopark" data-i18n-key="fleet" data-aos="fade">Автопарк</a></li>
-        <li class="nav-item"><a href="#about-us" data-i18n-key="aboutus" data-aos="fade">О нас</a></li>
+        <li class="nav-item">
+          <a href="#" data-scroll-to="top" data-i18n-key="main" data-aos="fade">Главная</a>
+        </li>
+        <li class="nav-item"><a href="#" data-scroll-to="autopark" data-i18n-key="fleet" data-aos="fade">Автопарк</a></li>
+        <li class="nav-item"><a href="#" data-scroll-to="about-us" data-i18n-key="aboutus" data-aos="fade">О нас</a></li>
     </ul>
     </nav>
-      <a href="#booking" class="btn-order" data-i18n-key="orderservice1" data-aos="fade">Заказать услугу</a>
+      <a href="#" data-scroll-to="booking" class="btn-order" data-i18n-key="orderservice1" data-aos="fade">Заказать услугу</a>
     </div>
   </header>
   
@@ -75,11 +80,11 @@
   <div class="hero__centerer">
     <div class="hero__content">
         <h1  data-i18n-key="premiumtransfer" class="hero-title">
-        <span class="hero-title__line">Премиальный</span>
-        <span class="hero-title__line">трансфер по Европе</span>
+        <span class="hero-title__line">Надёжный</span>
+        <span class="hero-title__line">трансфер по Чехии и Европе</span>
         </h1>
-      <p data-i18n-key="transferdescription">Безопасно. Комфортно. Удобно.</p>
-      <a href="#booking" class="btn-hero" data-i18n-key="orderservice2">Заказать услугу</a>
+      <p data-i18n-key="transferdescription">Путешествуйте без стресса — мы довезём Вас быстро и безопасно!</p>
+      <a href="#" data-scroll-to="booking" class="btn-hero" data-i18n-key="orderservice2">Заказать услугу</a>
     </div>
   </div>
 </section>
@@ -326,45 +331,75 @@ document.addEventListener('DOMContentLoaded', async () => {
   const btnImg       = switcher.querySelector('.current img');
   const options      = switcher.querySelectorAll('.options li');
   const savedLang    = localStorage.getItem('lang') || 'ru';
-  const CLOSE_DELAY  = 250; // ms, должно совпадать с duration в CSS
+  const CLOSE_DELAY  = 250;
 
-  function setLanguage(lang, flag) {
-    btnImg.src = `img/flag-${flag}.svg`;
-    btnImg.alt = flag.toUpperCase();
-    localStorage.setItem('lang', lang);
-    applyTranslations(translations, lang);
-  }
+function setLanguage(lang, flag) {
+  btnImg.src = `img/flag-${flag}.svg`;
+  btnImg.alt = flag.toUpperCase();
+  const langCode = document.querySelector('.lang-code-current');
+  if (langCode) langCode.textContent = flag.toUpperCase();
+  localStorage.setItem('lang', lang);
+  applyTranslations(translations, lang);
+}
 
-  // Инициализация
   {
     const initial = Array.from(options).find(li => li.dataset.lang === savedLang);
     const flag    = initial?.dataset.flag || 'ru';
     setLanguage(savedLang, flag);
   }
 
-  // Открытие/закрытие дропдауна
   switcher.addEventListener('click', e => {
     e.stopPropagation();
     const open = switcher.getAttribute('aria-expanded') === 'true';
     switcher.setAttribute('aria-expanded', String(!open));
   });
 
-  // Выбор языка + плавное закрытие
   options.forEach(li => {
     li.addEventListener('click', () => {
       const { lang, flag } = li.dataset;
       setLanguage(lang, flag);
-      // Ждём окончания CSS-анимации, затем закрываем
       setTimeout(() => {
         switcher.setAttribute('aria-expanded', 'false');
       }, CLOSE_DELAY);
     });
   });
 
-  // Закрытие при клике вне
   document.addEventListener('click', () => {
     switcher.setAttribute('aria-expanded', 'false');
   });
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('[data-scroll-to]').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('data-scroll-to');
+      const targetElement = targetId === 'top' 
+      ? document.querySelector('body') 
+      : document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+        history.replaceState(null, '', window.location.pathname);
+      }
+    });
+  });
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.location.hash) {
+    const id = window.location.hash.slice(1);
+    const target = document.getElementById(id);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.replaceState(null, '', window.location.pathname);
+    }
+  }
 });
 </script>
 
