@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+  <!-- Generator: Adobe Illustrator 29.5.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 141)  -->
+  <defs>
+    <filter id="drop-shadow-1" x="-83.5" y="-36.5" width="190" height="179" filterUnits="userSpaceOnUse">
+      <feOffset dx="-20.8" dy="20.8"/>
+      <feGaussianBlur result="blur" stdDeviation="20.8"/>
+      <feFlood flood-color="#000" flood-opacity=".4"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clippath">
+      <path d="M64,9.3c-.2,2.3-1.5,10.3-2.8,19l-4.1,25.7s-.3,3.8-3.1,4.4c-2.8.7-7.4-2.3-8.2-2.9-.7-.5-12.3-7.9-16.5-11.5-1.1-1-2.5-2.9.2-5.2,5.9-5.4,12.9-12.1,17.2-16.4,2-2,3.9-6.5-4.3-1l-23.1,15.5s-2.6,1.6-7.5.2c-4.9-1.5-10.6-3.4-10.6-3.4,0,0-3.9-2.5,2.8-5.1h0s38.1-15.7,38.1-15.7c3.8-1.6,16.5-6.9,16.5-6.9,0,0,5.9-2.3,5.4,3.3Z" fill="#08c"/>
+    </clipPath>
+  </defs>
+  <g isolation="isolate">
+    <g id="_Слой_1" data-name="Слой_1">
+      <g id="TELEGRAM_003">
+        <path id="BACK_SHADOW" d="M64,9.3c-.2,2.3-1.5,10.3-2.8,19l-4.1,25.7s-.3,3.8-3.1,4.4c-2.8.7-7.4-2.3-8.2-2.9-.7-.5-12.3-7.9-16.5-11.5-1.1-1-2.5-2.9.2-5.2,5.9-5.4,12.9-12.1,17.2-16.4,2-2,3.9-6.5-4.3-1l-23.1,15.5s-2.6,1.6-7.5.2c-4.9-1.5-10.6-3.4-10.6-3.4,0,0-3.9-2.5,2.8-5.1h0s38.1-15.7,38.1-15.7c3.8-1.6,16.5-6.9,16.5-6.9,0,0,5.9-2.3,5.4,3.3Z" fill="#08c" fill-rule="evenodd" filter="url(#drop-shadow-1)"/>
+        <g id="LOGO">
+          <path d="M64,9.3c-.2,2.3-1.5,10.3-2.8,19l-4.1,25.7s-.3,3.8-3.1,4.4c-2.8.7-7.4-2.3-8.2-2.9-.7-.5-12.3-7.9-16.5-11.5-1.1-1-2.5-2.9.2-5.2,5.9-5.4,12.9-12.1,17.2-16.4,2-2,3.9-6.5-4.3-1l-23.1,15.5s-2.6,1.6-7.5.2c-4.9-1.5-10.6-3.4-10.6-3.4,0,0-3.9-2.5,2.8-5.1h0s38.1-15.7,38.1-15.7c3.8-1.6,16.5-6.9,16.5-6.9,0,0,5.9-2.3,5.4,3.3Z" fill="#08c"/>
+          <g clip-path="url(#clippath)">
+            <g>
+              <g id="BACK">
+                <rect x="-19.7" y="-27.6" width="113.4" height="113.4" rx="56.7" ry="56.7" fill="#08c"/>
+                <rect x="-19.7" y="-27.6" width="113.4" height="113.4" rx="35.4" ry="35.4" fill="#08c"/>
+              </g>
+              <g id="COLOR">
+                <rect x="-19.7" y="-27.6" width="113.4" height="113.4" rx="56.7" ry="56.7" fill="#08c" mix-blend-mode="color"/>
+                <rect x="-19.7" y="-27.6" width="113.4" height="113.4" rx="56.7" ry="56.7" fill="#08c" mix-blend-mode="soft-light" opacity=".6"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
