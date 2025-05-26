@@ -550,8 +550,29 @@ img {
   text-align: center;
 }
 
+.footer__messengers {
+  padding-top: 0.25rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-left: 21.5rem;
+}
+
+.messenger-icon {
+  width: 28px;
+  height: 28px;
+}
+
 @media (max-width: 768px) {
   
+  .footer__messengers {
+    padding-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-left: 0rem;
+  }
+
   .lang-code-current {
     font-size: 1.1rem;
     text-align: center;
